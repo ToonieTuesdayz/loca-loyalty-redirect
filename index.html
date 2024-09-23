@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocaLoyalty Download</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Redirect iOS devices to the App Store link
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = 'https://apps.apple.com/ca/app/localoyalty/id6602888204?platform=iphone';
+            } 
+            // Redirect Android devices to the Google Play link
+            else if (/android/i.test(userAgent)) {
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.localoyalty.mobile&hl=en_US';
+            } 
+            // Redirect other devices to a generic page or main website
+            else {
+                window.location.href = 'https://yourwebsite.com'; // Replace with your fallback URL
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting to the appropriate app store...</p>
+</body>
+</html>
