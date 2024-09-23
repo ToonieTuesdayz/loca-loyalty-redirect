@@ -1,0 +1,1 @@
+# loca-loyalty-redirect
